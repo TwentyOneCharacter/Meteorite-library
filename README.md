@@ -8,10 +8,6 @@
 ____
 
 ## Hub Changelog
-+ [➕] Added Buttons
-  * [➕] Added Icons on Buttons
-
-+ [➕] Added Selector
-  * [➕] Added Selector Variables
-
-[➕] Added Settings Page (You can choose blur the workspace or not.)
++ [➕] Added Color Picker
++ [➕] Added Keycode Box
++ [➕] Added Elements List
