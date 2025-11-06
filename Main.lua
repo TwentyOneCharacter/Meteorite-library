@@ -288,12 +288,12 @@ MeteoriteHub.Functions = {
 		if Name == nil or Name == "" then
 			error("Tab name is empty or equals nil.")
 		end
-
+		
 		---------------------------------------------
 
 		openOnCreate = openOnCreate or false
 		iconID = iconID or 0
-
+		
 		---------------------------------------------
 
 		local newButton = Instance.new("Frame")
@@ -307,7 +307,7 @@ MeteoriteHub.Functions = {
 		local buttonUICorner = Instance.new("UICorner")
 		buttonUICorner.CornerRadius = UDim.new(0, 5)
 		buttonUICorner.Parent = newButton
-
+		
 		---------------------------------------------
 
 		local Icon = Instance.new("ImageLabel")
@@ -318,7 +318,7 @@ MeteoriteHub.Functions = {
 		Icon.BackgroundTransparency = 1
 		Icon.Parent = newButton
 		Icon.Name = "Icon"
-
+		
 		---------------------------------------------
 
 		local Title = Instance.new("TextLabel")
@@ -334,7 +334,7 @@ MeteoriteHub.Functions = {
 		Title.BackgroundTransparency = 1
 		Title.Text = `<b>{Name}</b>`
 		Title.RichText = true
-
+		
 		---------------------------------------------
 
 		local Button = Instance.new("TextButton")
@@ -342,7 +342,7 @@ MeteoriteHub.Functions = {
 		Button.Parent = newButton
 		Button.Transparency = 1
 		Button.Name = "Button"
-
+		
 		---------------------------------------------
 
 		local newPage = Instance.new("Frame")
@@ -354,12 +354,12 @@ MeteoriteHub.Functions = {
 		newPage.Name = Name
 
 		local page_UICorner = newInstance("UICorner", {Name = "UICorner"; Parent = newPage; CornerRadius = UDim.new(0, 5)})
-
+		
 		---------------------------------------------
 
 		Button.MouseButton1Click:Connect(function() openTab(Name) end)
 		if openOnCreate == true then openTab(Name) end
-
+		
 		---------------------------------------------
 
 		return {
@@ -367,7 +367,7 @@ MeteoriteHub.Functions = {
 			Button = newButton
 		}
 	end,
-
+	
 	createTitle = function(Name: string)
 		if Name == nil or Name == "" then
 			error("Title name is empty or equals nil.")
@@ -381,7 +381,7 @@ MeteoriteHub.Functions = {
 		Frame.BackgroundTransparency = 0.45
 		Frame.BorderSizePixel = 0
 		Frame.Name = Name
-
+		
 		local UICorner = Instance.new("UICorner")
 		UICorner.CornerRadius = UDim.new(0, 2)
 		UICorner.Parent = Frame
@@ -410,7 +410,7 @@ MeteoriteHub.Functions = {
 			Frame = Frame;
 		}
 	end,
-
+	
 	---------------------------------------------
 
 	add_checkBox = function(Name: string, standartValue: boolean)
@@ -1007,7 +1007,7 @@ MeteoriteHub.Functions = {
 		}
 	end,
 
-	add_colorPicker = function(Name: string, standartColor: Color3, standartTransparency: number)
+	add_colorPicker = function(Name: string, standartColor: Color3)
 		if Name == nil or Name == "" then
 			error("Color picker name is empty or equals nil.")
 		end
@@ -1015,7 +1015,6 @@ MeteoriteHub.Functions = {
 		---------------------------------------------
 
 		standartColor = standartColor or Color3.fromRGB(255, 255, 255)
-		standartTransparency = standartTransparency or 0.5
 
 		---------------------------------------------
 
@@ -1478,7 +1477,7 @@ MeteoriteHub.Functions = {
 			keyState = keyState
 		}
 	end,
-
+	
 	add_elementsList = function(Name: string)
 		if Name == nil or Name == "" then
 			error("elements list name is empty or equals nil.")
@@ -1526,9 +1525,9 @@ MeteoriteHub.Functions = {
 
 		Button.Transparency = 1
 		Button.Size = UDim2.fromScale(1, 1)
-
+		
 		---------------------------------------------
-
+		
 		local Left = Instance.new("ImageLabel")
 		Left.Parent = Frame
 		Left.Name = "leftIcon"
@@ -1536,13 +1535,13 @@ MeteoriteHub.Functions = {
 		Left.Image = `rbxassetid://12338895277`
 		Left.Size = UDim2.fromOffset(15, 15)
 		Left.BackgroundTransparency = 1
-
+		
 		Left.Position = UDim2.new(0, 8, 0.5, 0)
 		Left.AnchorPoint = Vector2.new(0, 0.5)
 		Left.Rotation = 180
-
+		
 		---------------------------------------------
-
+		
 		local Right = Instance.new("ImageLabel")
 		Right.Parent = Frame
 		Right.Name = "rightIcon"
@@ -1553,63 +1552,63 @@ MeteoriteHub.Functions = {
 
 		Right.Position = UDim2.new(0, 143, 0.5, 0)
 		Right.AnchorPoint = Vector2.new(1, 0.5)
-
+		
 		---------------------------------------------
-
+		
 		local List = Instance.new("ScrollingFrame")
 		List.Visible = false
 		List.Parent = Frame
 		List.Name = "List"
-
+		
 		List.BorderSizePixel = 0
 		List.BackgroundTransparency = 0.4
 		List.BackgroundColor3 = Color3.new(0, 0, 0)
 		List.CanvasSize = UDim2.fromOffset(0, 0)
-
+		
 		List.Size = UDim2.fromOffset(165, 0)
 		List.AnchorPoint = Vector2.new(0.5, 0)
 		List.Position = UDim2.fromScale(0.5, 1.2)
 		List.ScrollBarThickness = 3
-
+		
 		local UIPadding = Instance.new("UIPadding")
 		UIPadding.Parent = List
 		UIPadding.PaddingTop = UDim.new(0, 5)
 		UIPadding.PaddingBottom = UDim.new(0, 5)
-
+		
 		local ListStroke = Instance.new("UIStroke")
 		ListStroke.Parent = List
-
+		
 		ListStroke.Thickness = 1
 		ListStroke.Color = Color3.new(1, 1, 1)
-
+		
 		local ListCorner = Instance.new("UICorner")
 		ListCorner.CornerRadius = UDim.new(0, 1)
 		ListCorner.Parent = List
-
+		
 		local UIListLayout = Instance.new("UIListLayout")
 		UIListLayout.Parent = List
-
+		
 		UIListLayout.Padding = UDim.new(0, 5)
 		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-
+		
 		UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
 			List.CanvasSize = UDim2.fromOffset(0, UIListLayout.AbsoluteContentSize.Y+10)
 		end)
 
 		---------------------------------------------
-
+		
 		Button.MouseButton1Up:Connect(function()
 			if not List.Visible then
 				List.Visible = true
-
+				
 				TweenService:Create(List, TweenInfo.new(0.4), {
 					Size = UDim2.fromOffset(165, 50)
 				}):Play()
-
+				
 				TweenService:Create(Left, TweenInfo.new(0.4), {
 					Rotation = 90;
 				}):Play()
-
+				
 				TweenService:Create(Right, TweenInfo.new(0.4), {
 					Rotation = 90;
 				}):Play()
@@ -1625,13 +1624,13 @@ MeteoriteHub.Functions = {
 				TweenService:Create(Right, TweenInfo.new(0.4), {
 					Rotation = 0;
 				}):Play()
-
+				
 				_end.Completed:Connect(function()
 					List.Visible = false
 				end)
 			end
 		end)
-
+		
 		---------------------------------------------
 
 		return {
