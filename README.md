@@ -127,7 +127,7 @@ ____
   hubFunctions.add_checkBox("checkBox").Frame.Parent = List.List
 ```
 
-> [!NOTICE]
+> [!NOTE]
 > Hub version now is 0.3.5b
 > All function can be changed any time
 ____
