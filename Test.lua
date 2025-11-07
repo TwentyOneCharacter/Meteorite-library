@@ -106,7 +106,7 @@ end
 MeteoriteHub.Init = function(hubName: string, showGameTitle: boolean)
 	MeteoriteHub.InterfaceElements["ScreenGui"] = newInstance("ScreenGui", {Name = HttpService:GenerateGUID(false); ZIndexBehavior = Enum.ZIndexBehavior.Sibling; IgnoreGuiInset = true; Parent = _hasCoreAccess()}):: ScreenGui
 
-	MeteoriteHub.InterfaceElements["MainBorder"] = newInstance("Frame", {Name = "Border"; Size = UDim2.fromScale(1, 1); AnchorPoint = Vector2.new(0.5, 0.5); Transparency = 1; Parent = MeteoriteHub.InterfaceElements["ScreenGui"]}):: Frame
+	MeteoriteHub.InterfaceElements["MainBorder"] = newInstance("Frame", {Name = "Border"; Size = UDim2.fromScale(1, 1); AnchorPoint = Vector2.new(0.5, 0.5); Position = UDim2.fromScale(0.5, 0.5); Transparency = 1; Parent = MeteoriteHub.InterfaceElements["ScreenGui"]}):: Frame
 	Blur.Size = 20
 
 	---------------------------------------------
