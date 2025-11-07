@@ -1685,18 +1685,4 @@ end
 
 ---------------------------------------------
 
---// Settings
-
-local blurSetting = MeteoriteHub.Functions.add_checkBox("Enable Blur", true)
-blurSetting.Frame.Parent = MeteoriteHub.InterfaceElements["Menu"]["Settings"]["Frame"]
-blurSetting.Frame.Position = UDim2.fromOffset(20, 50)
-
-blurSetting.BoolValue.Value = Blur.Enabled
-blurSetting.BoolValue.Changed:Connect(function()
-	local State = blurSetting.BoolValue.Value
-	Blur.Enabled = State
-end)
-
----------------------------------------------
-
 return MeteoriteHub
